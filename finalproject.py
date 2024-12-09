@@ -3,9 +3,8 @@ import numpy as np
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
-from sklearn.cluster import KMeans, DBSCAN
+from sklearn.cluster import KMeans
 from sklearn.decomposition import PCA
-from sklearn.preprocessing import StandardScaler
 
 dataframe = pd.read_csv('gym_dataset.csv')
 # features = ["Age","Weight (kg)","Height (m)","BMI","Workout_Frequency (days/week)"]
