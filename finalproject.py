@@ -115,7 +115,6 @@ elif var_radio == sections[3]:
         outliers = detect_outliers_iqr(dataCopy[column])
         dataCopy.loc[outliers, column] = np.nan
     dataCopy = dataCopy.dropna()
-    scaler = StandardScaler()
     pca = PCA(n_components=2)
     dimension_flat = pca.fit_transform(dataCopy)
     df_pca = pd.DataFrame(data=dimension_flat, columns=['PC1','PC2'])
@@ -169,7 +168,6 @@ elif var_radio == sections[4]:
         outliers = detect_outliers_iqr(dataCopy[column])
         dataCopy.loc[outliers, column] = np.nan
     dataCopy = dataCopy.dropna()
-    scaler = StandardScaler()
     pca = PCA(n_components=2)
     dimension_flat = pca.fit_transform(dataCopy)
     df_pca = pd.DataFrame(data=dimension_flat, columns=['PC1','PC2'])
